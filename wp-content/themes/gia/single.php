@@ -2,7 +2,7 @@
 <div id="single-template">
   <section id="post-header">
     <div class="container">
-      <div>
+      <div class="post-headline">
         <a class="btn-close" href="<?php echo get_site_url(); ?>"></a>
         <a class="logo" href="<?php echo get_site_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/_assets/images/logo-black.svg"/></a>
         <div class="post-meta">

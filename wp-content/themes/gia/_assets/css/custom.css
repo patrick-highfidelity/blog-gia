@@ -343,6 +343,9 @@ section#post-header{
   position: relative;
   margin-bottom: 55px;
 }
+section#post-header .post-headline{
+  position: relative;
+}
 section#post-header .logo{
   width: 150px;
   display: block;

@@ -23,10 +23,10 @@
 define('DB_NAME', 'blog-gia');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'patrickmartin');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', 'highFidelity');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
