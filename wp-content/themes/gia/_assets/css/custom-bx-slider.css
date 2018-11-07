@@ -1,0 +1,17 @@
+.bx-wrapper{
+  box-shadow: none;
+  border: none;
+  margin-bottom: 30px;
+  background-color: transparent;
+}
+
+.bx-viewport{
+  height: auto!important;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a{
+  background: rgba(255,255,255,.5);
+}
+.bx-wrapper .bx-pager.bx-default-pager a.active{
+  background: #fff;
+}
