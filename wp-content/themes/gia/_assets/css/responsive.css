@@ -1,0 +1,151 @@
+
+
+@media only screen and (max-width: 500px) {
+  [class*='col-']{
+    width: 100%!important;
+  }
+  .col {
+    padding: 1.15em 0 0 0!important;
+  }
+  section{
+    margin: 35px auto auto auto;
+  }
+  section.bg{
+    padding: 35px 0;
+  }
+  p{font-size: 16px;
+  }
+  h2{
+    font-size: 1.85em;
+  }
+  h3{
+    font-size: 1.5em;
+  }
+  .section-title{
+    margin-bottom: 15px;
+  }
+
+  input, textarea, select{
+    border-radius: 3px;
+  }
+
+  .play-button:before{
+    font-size: 3.5em;
+  }
+
+
+  /* Homepage Banner */
+  section#homepage-banner, #category-banner{
+    padding: 75px 0;
+  }
+  section#homepage-banner img.site-logo{
+    width: 160px;
+  }
+  section#homepage-banner h1.site-title{
+    font-size: 30px;
+  }
+  section#homepage-banner h3.site-subtitle{
+    font-size: 1.1em;
+  }
+
+  .section-title.homepage{
+    font-size: 2em;
+  }
+
+  /* Homepage category selections */
+  section#homepage-category-selections .featured-post{
+    margin-bottom: 15px;
+  }
+  .category-tabs{
+    margin-bottom: 15px;
+  }
+
+
+  /* Intro Video */
+  #intro-video{
+    height: 200px;
+  }
+
+  /* Quotes */
+  #quotes{
+    padding: 35px 0;
+  }
+  p.quote-body{
+    font-size: 1em;
+  }
+  .offset-bg-yellow{
+    height: 400px;
+  }
+
+  /* Post Archive (query) */
+  .post-item{
+    margin-bottom: 10px;
+  }
+  .post-image{
+    height: 180px;
+  }
+  .post-image,
+  .post-image:hover{
+    background-size: cover;
+  }
+  .post-meta{
+    margin: 10px 0 0 0;
+  }
+  .post-excerpt{
+    margin: 10px 0;
+  }
+  .featured-post .post-image{
+    height: 200px;
+  }
+  .featured-post .post-excerpt{
+    margin: 16px 0;
+  }
+
+  /* Category Page */
+  #category-banner{
+    height: auto;
+  }
+  .category-dropdown{
+    position: relative;
+    margin: auto;
+  }
+  .back-link{
+    display: block;
+    margin: 0 0 5px 0;
+  }
+  .category-selected h1{
+    font-size: 45px;
+    line-height: 105%;
+  }
+  .category-description p{
+    margin: 7px 0 0 0;
+    font-size: 16px;
+    line-height: 130%;
+  }
+  ul.category-listing{
+    width: 100%;
+    top: 90px;
+  }
+  ul.category-listing li{
+    width: 100%;
+  }
+
+
+  /* Sinlge Post Page */
+  section#post-header{
+    margin-bottom: 35px;
+  }
+  section#post-header .logo{
+    width: 100px;
+    margin: auto auto 20px auto;
+  }
+  section#post-content .post-video-container{
+    height: 200px;
+    margin: 0 0 35px 0;
+  }
+
+  /* Post Comments */
+  section#post-comments br{
+    display: none;
+  }
+}

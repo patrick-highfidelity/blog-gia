@@ -300,6 +300,10 @@ ul.breadcrumbs li:last-child{
 
     position: relative;
     z-index: 0;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 .btn:hover,
 button:hover,
@@ -392,6 +396,10 @@ input, textarea, select {
   /* line-height: 160%; */
   vertical-align: top;
   font-family: 'circular', sans-serif;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 input[type="submit"]{
   box-shadow: none;
