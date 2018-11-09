@@ -4,7 +4,7 @@
 	<div class="banner-content">
 		<img class="site-logo" src="<?php bloginfo('template_url'); ?>/_assets/images/logo-white.svg"/>
 		<h1 class="site-title">Gia does what she loves</h1>
-		<h3 class="site-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+		<h3 class="site-subtitle">Living life with an open heart.</h3>
 	</div>
 	<div class="bg-overlay"></div>
 </section>
