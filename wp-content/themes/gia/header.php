@@ -26,4 +26,20 @@
   <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/_assets/js/script.js"></script>
 </head>
 <body class="<?php if(is_user_logged_in()){ ?>logged-in<?php }else{ ?>logged-out<?php } ?>">
+
+	<header>
+		<div class="container">
+			<a href="<?php echo get_site_url(); ?>" class="title">
+				<img class="logo" src="<?php bloginfo('template_url'); ?>/_assets/images/logo-black.svg"/>
+				<h3 class="title">Gia does what she loves</h3>
+			</a>
+			<div class="hamburger-menu">
+			</div>
+			<?php wp_nav_menu( $args ); ?>
+		</div>
+	</header>
+	<div id="header-height">
+	</div>
+
+
 <?php wp_head(); ?>

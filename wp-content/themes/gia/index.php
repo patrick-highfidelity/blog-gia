@@ -9,7 +9,79 @@
 	<div class="bg-overlay"></div>
 </section>
 
-<section id="homepage-category-selections">
+<section id="homepage-all-posts">
+	<div class="container">
+		<div class="featured-post">
+			<?php $cat_id = get_query_var('cat'); global $post; ?>
+			<?php
+			$args = array(
+			'post_type' => 'post',
+			'posts_per_page' => 1
+			);
+			$the_query = new WP_Query( $args );
+			if ( $the_query->have_posts() ) {
+				while ( $the_query->have_posts() ) { $the_query->the_post(); ?>
+			<div class="col-6">
+				<div class="col">
+					<?php if ( has_post_thumbnail() ) { ?>
+						<a href="<?php echo the_permalink(); ?>">
+							<div class="post-image" style="background-image:url('<?php the_post_thumbnail_url(); ?>');">
+							</div>
+						</a>
+					<?php } ?>
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="col">
+					<div class="post-meta">
+						<span class="post-date"><?php echo date("M d, Y", strtotime(get_the_date())); ?></span>
+						<span class="post-category"><?php echo the_category();?></span>
+					</div>
+					<a href="<?php echo the_permalink(); ?>">
+						<h2 class="post-title"><?php echo the_title();?></h2>
+					</a>
+					<p class="post-excerpt"><?php echo wp_trim_words( get_the_content(), 30, '...' ); ?></p>
+					<a class="post-link" href="<?php echo the_permalink(); ?>">Read More</a>
+				</div>
+			</div>
+			<?php } wp_reset_postdata(); } else { }?>
+		</div>
+		<div class="column-posts">
+			<?php
+			$args = array(
+			'post_type' => 'post',
+			'posts_per_page' => 3,
+			'offset' => 1
+			);
+			$the_query = new WP_Query( $args );
+			// The Loop
+			if ( $the_query->have_posts() ) {
+				while ( $the_query->have_posts() ) { $the_query->the_post(); ?>
+					<div class="col-4 post-item">
+						<div class="col">
+							<?php if ( has_post_thumbnail() ) { ?>
+								<a href="<?php echo the_permalink(); ?>">
+									<div class="post-image" style="background-image:url('<?php the_post_thumbnail_url(); ?>');">
+									</div>
+								</a>
+							<?php } ?>
+							<div class="post-meta">
+								<span class="post-date"><?php echo date("M d, Y", strtotime(get_the_date())); ?></span>
+								<span class="post-category"><?php echo the_category(); ?></span>
+							</div>
+							<a href="<?php echo the_permalink(); ?>">
+								<h3 class="post-title"><?php echo the_title();?></h3>
+							</a>
+							<p class="post-excerpt"><?php echo strip_tags(get_the_excerpt());?></p>
+							<a class="post-link" href="<?php echo the_permalink(); ?>">Read More</a>
+						</div>
+					</div>
+			<?php } wp_reset_postdata(); } else { }?>
+		</div>
+	</div>
+</section>
+
+<section id="homepage-category-posts">
 	<div class="container">
 		<h2 class="section-title homepage">My adventures in a nutshell.</h2>
 
@@ -65,7 +137,7 @@
 						</div>
 		        <?php } wp_reset_postdata(); } else { }?>
 					</div>
-					<div>
+					<div class="column-posts">
 						<?php
 			      $args = array(
 			      'post_type' => 'post',
@@ -142,6 +214,7 @@
 			pager: false,
 			touchEnabled: false,
 			speed: 350,
+			adaptiveHeight: true,
 			onSlideAfter: function($slideElement, oldIndex, newIndex) {
 				jQuery('.tab-item[cat-num='+newIndex+']').addClass('active');
 				jQuery('.tab-item[cat-num='+oldIndex+']').removeClass('active');

@@ -10,6 +10,7 @@
           <span class="post-category"><?php echo the_category();?></span>
         </div>
         <h1 class="post-title"><?php echo the_title();?></h1>
+        <div class="social-share"><?php echo DISPLAY_ULTIMATE_PLUS(); ?></div>
       </div>
     </div>
   </section>

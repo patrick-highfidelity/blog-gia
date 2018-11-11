@@ -11,9 +11,9 @@
 
 <?php if(!is_front_page()){ ?>
   <style>
-  	#user-stories{
+  	/* #user-stories{
   		margin:55px 0 0 0!important;
-  	}
+  	} */
   </style>
 <?php } ?>
 

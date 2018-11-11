@@ -1,12 +1,12 @@
 .bx-wrapper{
   box-shadow: none;
   border: none;
-  margin-bottom: 30px;
+  margin-bottom: 0;
   background-color: transparent;
 }
 
 .bx-viewport{
-  height: auto!important;
+  /* height: auto!important; */
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a{

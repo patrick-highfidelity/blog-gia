@@ -88,6 +88,51 @@ jQuery( document ).ready(function() {
     jQuery(this).find('.reply a').attr('href',str);
   });
 
+  if ($(window).width() >= 700) {
+    // Main Menu Item Dropdown
+    jQuery('li.menu-item-has-children').mouseenter(function(){
+      jQuery('ul',this).slideDown('fast');
+    });
+    jQuery('li.menu-item-has-children').mouseleave(function(){
+      jQuery('ul',this).slideUp('fast');
+    });
+
+    // Push everything (underneath the Header) down by the header's height
+    jQuery('#header-height').height(jQuery('header').height()-3);
+    jQuery('header ul.menu li ul').css('top',jQuery('header').height()-1);
+  }
+  else{
+    jQuery('li.menu-item-has-children').click(function(){
+      if(jQuery('ul',this).css('display')=="none"){
+        jQuery('ul',this).slideDown('fast');
+      }else{
+        jQuery('ul',this).slideUp('fast');
+      }
+    });
+    // Push everything (underneath the Header) down by the header's height
+    jQuery('#header-height').height(jQuery('header').height()+30);
+
+    jQuery('.hamburger-menu').click(function(){
+      if(jQuery(this).next('.menu-main-menu-container').css('right') <= "-600px"){
+        jQuery(this).addClass('open');
+        jQuery(this).next('.menu-main-menu-container').animate({
+          right: "0"
+        }, 180, function(){
+        });
+        // jQuery(this).next('.menu-main-menu-container').css('right','0');
+      }else{
+        jQuery(this).removeClass('open');
+        // jQuery(this).next('.menu-main-menu-container').css('right','600px');
+        jQuery(this).next('.menu-main-menu-container').animate({
+          right: "-600px"
+        }, 180, function(){
+        });
+      }
+      // jQuery(this).next('.menu-main-menu-container').slideToggle('fast');
+    });
+
+  }
+
   // Highlight Respondee Comment
   var user_comment_id = window.location.search.split("replytocom=")[1];
   if(user_comment_id){
@@ -116,10 +161,16 @@ jQuery( document ).ready(function() {
 
     sessionStorage.setItem('user_comment_id',null);
   }
+
+
+
 });
 
 jQuery( window ).resize(function() {
   // Adapt Height of Comment List to Height of Comment Form
   jQuery('.comment-list').height(jQuery('.comment-form').height());
 
+  // Push everything (underneath the Header) down by the header's height
+  jQuery('#header-height').height(jQuery('header').height()-3);
+  jQuery('header ul.menu li ul').css('top',jQuery('header').height()-1);
 });

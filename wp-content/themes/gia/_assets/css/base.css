@@ -35,7 +35,7 @@ body{
   line-height: 170%;
   /* -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased; */
-  color: #383838;
+  color: #11171A;
 }
 
 .clear{clear: both;}
@@ -58,7 +58,7 @@ h1,h2,h3,h4{
 h1:first-child,h2:first-child,h3:first-child,h4:first-child{
   margin-top: 0;
 }
-h1{font-size: 2.6em;}
+h1{font-size: 2.65em;}
 h2{font-size: 2em; margin: 2.5% 0 0.5% 0;}
 h3{font-size: 1.5em; margin: 2.5% 0 0.5% 0;}
 h4{font-size: 1.45em;}
@@ -195,27 +195,29 @@ section.bg.light-grey{
 /************** NAVIGATION **************/
 header ul.menu li{
   display: inline-block;
-  /* margin: 0 20px 0 0; */
+  margin: 0 20px 0 0;
   position: relative;
   vertical-align: -webkit-baseline-middle;
   text-align: center;
   transition-duration: 0.2s;
 }
-
-header ul.menu li.expandable:after{
+header ul.menu li:last-child{
+  margin: 0;
+}
+header ul.menu li.menu-item-has-children:after{
   font-family: FontAwesome;
   content:"\f107";
 
   display: inline-block;
 }
-header ul.menu li.expandable.open:after{
+header ul.menu li.menu-item-has-children.open:after{
   content:"\f106";
 }
 header ul.menu li:before{ display: none; }
 
 header ul.menu li ul{
   display: none;
-  width: 150px;
+  width: 200px;
   position: absolute;
   top: 20px;
   background: white;
@@ -226,7 +228,7 @@ header ul.menu li ul li{
   margin: 0;
 }
 header ul.menu li ul li a{
-  font-size: .85em;
+  /* font-size: .85em; */
   padding: 10px;
   box-sizing: border-box;
   display: block;

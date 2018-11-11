@@ -42,8 +42,13 @@ function remove_comment_author_link( $return, $author, $comment_ID ) {
 }
 add_filter( 'get_comment_author_link', 'remove_comment_author_link', 10, 3 );
 
+// Register Menu
+function register_my_menu() {
+  register_nav_menu('header-menu',__( 'Main Menu' ));
+}
+add_action( 'init', 'register_my_menu' );
 
-
+// Register Post Type = Quotes
 function quotes_post_type()
 {
     $labels = array(

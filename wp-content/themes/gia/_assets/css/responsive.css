@@ -13,13 +13,19 @@
   section.bg{
     padding: 35px 0;
   }
+  .container{
+    max-width: 87%;
+  }
   p{font-size: 16px;
   }
+  h1{
+    font-size: 2.25em;
+  }
   h2{
-    font-size: 1.85em;
+    font-size: 1.65em;
   }
   h3{
-    font-size: 1.5em;
+    font-size: 1.45em;
   }
   .section-title{
     margin-bottom: 15px;
@@ -53,7 +59,7 @@
   }
 
   /* Homepage category selections */
-  section#homepage-category-selections .featured-post{
+  section#homepage-category-posts .featured-post{
     margin-bottom: 15px;
   }
   .category-tabs{
@@ -97,13 +103,18 @@
   .featured-post .post-image{
     height: 200px;
   }
+  .featured-post .post-image,
+  .featured-post .post-image:hover{
+    background-size: cover;
+  }
   .featured-post .post-excerpt{
-    margin: 16px 0;
+    margin: 13px 0;
   }
 
   /* Category Page */
   #category-banner{
     height: auto;
+    padding: 65px 0 30px 0;
   }
   .category-dropdown{
     position: relative;
@@ -130,7 +141,6 @@
     width: 100%;
   }
 
-
   /* Sinlge Post Page */
   section#post-header{
     margin-bottom: 35px;
@@ -147,5 +157,80 @@
   /* Post Comments */
   section#post-comments br{
     display: none;
+  }
+
+  /* User Stories */
+  section#user-stories h2{
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  header{
+    padding: 15px 0;
+  }
+  header .menu-main-menu-container{
+    /* display: none; */
+    position: absolute;
+    top: 60px;
+    right: -600px;
+    background: #fff;
+    width: 90%;
+
+
+  }
+  header ul.menu li{
+    display: block;
+    margin: 0;
+    font-size: 1.35em;
+  }
+  header ul.menu li a{
+    padding: 14px 30px;
+    display: block;
+    border-bottom: 1px solid #F2F2F2;
+  }
+
+  header ul.menu li.menu-item-has-children:after {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.35em;
+  }
+
+  header ul.menu li ul{
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    border-top: none;
+  }
+  header ul.menu li ul li{
+    font-size: 1em;
+  }
+  header ul.menu li ul li a{
+    text-align: center;
+    padding: 12px 14px;
+  }
+  header img.logo{
+    top: auto;
+    width: 30px;
+  }
+  header img.logo,
+  header h3.title{
+    vertical-align: middle;
+    font-size: 1.3em;
+  }
+
+  header .hamburger-menu{
+    display: inline-block;
+  }
+
+  ul.category-listing li a{
+    padding: 15px;
+  }
+
+  section#post-header{
+    margin: 40px 0 0 0;
   }
 }
