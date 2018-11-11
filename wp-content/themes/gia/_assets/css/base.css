@@ -58,7 +58,7 @@ h1,h2,h3,h4{
 h1:first-child,h2:first-child,h3:first-child,h4:first-child{
   margin-top: 0;
 }
-h1{font-size: 2.65em;}
+h1{font-size: 2.5em;}
 h2{font-size: 2em; margin: 2.5% 0 0.5% 0;}
 h3{font-size: 1.5em; margin: 2.5% 0 0.5% 0;}
 h4{font-size: 1.45em;}
@@ -353,6 +353,14 @@ a.btn.hover-blue:hover{
 a.btn.hover-white:hover{
   border:1.5px solid #fff;
   color: #fff!important;
+}
+
+a.btn.small,
+input[type="submit"].small,
+button.small{
+  font-size: .75em;
+  padding: 4px 18px;
+  font-family: 'circular-black';
 }
 
 input:focus,

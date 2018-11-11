@@ -1,11 +1,91 @@
 
 
+@media only screen and (max-width: 700px) {
+  header{
+    padding: 15px 0;
+  }
+  header .menu-main-menu-container{
+    /* display: none; */
+    position: absolute;
+    top: 60px;
+    right: -600px;
+    background: #fff;
+    width: 90%;
+
+
+  }
+  header ul.menu li{
+    display: block;
+    margin: 0;
+    font-size: 1.35em;
+  }
+  header ul.menu li a{
+    padding: 14px 30px;
+    display: block;
+    border-bottom: 1px solid #F2F2F2;
+  }
+
+  header ul.menu li.menu-item-has-children:after {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.35em;
+  }
+
+  header ul.menu li ul{
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    border-top: none;
+  }
+  header ul.menu li ul li{
+    font-size: 1em;
+  }
+  header ul.menu li ul li a{
+    text-align: center;
+    padding: 12px 14px;
+  }
+  header img.logo{
+    top: auto;
+    width: 30px;
+  }
+  header img.logo,
+  header h3.title{
+    vertical-align: middle;
+    font-size: 1.3em;
+  }
+
+  header .hamburger-menu{
+    display: inline-block;
+  }
+
+  ul.category-listing li a{
+    padding: 15px;
+  }
+
+  section#post-header{
+    margin: 40px 0 0 0;
+  }
+
+  .play-button:before{
+    font-size: 3.5em;
+  }
+}
+
+
+
 @media only screen and (max-width: 500px) {
   [class*='col-']{
     width: 100%!important;
   }
   .col {
     padding: 1.15em 0 0 0!important;
+  }
+  section#post-header a.btn-close:before{
+    right: 0;
+    font-size: 2em;
   }
   section{
     margin: 35px auto auto auto;
@@ -142,16 +222,24 @@
   }
 
   /* Sinlge Post Page */
+  section#post-content{
+    margin-top: 10px;
+  }
   section#post-header{
-    margin-bottom: 35px;
+    margin: 25px 0 0 0;
   }
   section#post-header .logo{
     width: 100px;
     margin: auto auto 20px auto;
   }
+  section#post-header .post-headline .col{
+    padding-top: 0!important;
+  }
   section#post-content .post-video-container{
-    height: 200px;
-    margin: 0 0 35px 0;
+    margin: 0 0 25px 0;
+  }
+  section#post-content .post-content-container p{
+    margin: 0 0 15px 0;
   }
 
   /* Post Comments */
@@ -162,75 +250,5 @@
   /* User Stories */
   section#user-stories h2{
     font-size: 2em;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  header{
-    padding: 15px 0;
-  }
-  header .menu-main-menu-container{
-    /* display: none; */
-    position: absolute;
-    top: 60px;
-    right: -600px;
-    background: #fff;
-    width: 90%;
-
-
-  }
-  header ul.menu li{
-    display: block;
-    margin: 0;
-    font-size: 1.35em;
-  }
-  header ul.menu li a{
-    padding: 14px 30px;
-    display: block;
-    border-bottom: 1px solid #F2F2F2;
-  }
-
-  header ul.menu li.menu-item-has-children:after {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.35em;
-  }
-
-  header ul.menu li ul{
-    position: relative;
-    top: 0;
-    width: 100%;
-    margin: 0;
-    box-shadow: none;
-    border-top: none;
-  }
-  header ul.menu li ul li{
-    font-size: 1em;
-  }
-  header ul.menu li ul li a{
-    text-align: center;
-    padding: 12px 14px;
-  }
-  header img.logo{
-    top: auto;
-    width: 30px;
-  }
-  header img.logo,
-  header h3.title{
-    vertical-align: middle;
-    font-size: 1.3em;
-  }
-
-  header .hamburger-menu{
-    display: inline-block;
-  }
-
-  ul.category-listing li a{
-    padding: 15px;
-  }
-
-  section#post-header{
-    margin: 40px 0 0 0;
   }
 }

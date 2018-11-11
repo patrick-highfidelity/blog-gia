@@ -1,12 +1,10 @@
 header{
-  /* padding: 5px 0; */
   box-sizing: border-box;
   position: fixed;
   width: 100%;
-  /* top: 0; */
-  /* left: 0; */
   z-index: 3;
   background-color: #fff;
+  box-shadow: 1px 1px 15px rgba(0,0,0,0.15);
 }
 header .title{
   display: inline-block;
@@ -79,7 +77,7 @@ header .hamburger-menu.open:after{
 }
 
 section#homepage-banner{
-  background-image: url('../images/IMG_0049.jpg');
+  background-image: url('../images/img-5.png');
   margin:0;
 }
 section#homepage-banner,
@@ -462,7 +460,7 @@ section#category-archive{
 /* Single Post */
 section#post-header{
   position: relative;
-  margin: 20px 0 0 0;
+  /* margin: 20px 0 0 0; */
 }
 section#post-header .post-headline{
   position: relative;
@@ -474,11 +472,10 @@ section#post-header .logo{
   transition-duration: .2s;
 }
 section#post-header .post-meta{
-  font-size: 1.25em;
-  text-align: center;
+  margin: 0;
+  font-size: 1.15em;
 }
 section#post-header h1.post-title{
-  text-align: center;
 }
 
 section#post-header a.btn-close:before{
@@ -487,7 +484,7 @@ section#post-header a.btn-close:before{
   font-size:2.15em;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 4.2%;
 }
 section#post-header .social-share{
   width: fit-content;
@@ -507,10 +504,41 @@ section#post-header .social-share #sfsi_holder{
   position: absolute!important;
 }
 
+/* Post Content - ALL tags */
+section#post-content{
+  margin-top: 35px;
+}
+section#post-content .post-content-container *{
+  margin: 0 0 15px 0;
+}
+/* Post Content - Paragraphs */
+section#post-content .post-content-container p{
+  margin: 0 0 25px 0;
+}
+section#post-content .post-content-container p:last-child{
+  margin: 0;
+}
+/* Post Content - Lists */
+section#post-content .post-content-container ul,
+section#post-content .post-content-container ol{
+  margin: 0 0 30px 0;
+  list-style-position: inside;
+}
+section#post-content .post-content-container li{
+  margin-bottom: 6px;
+}
+
+/* Post Content - Tables */
+section#post-content .post-content-container table{
+  margin-bottom: 25px;
+}
+
+/* Post Content - Video */
 section#post-content .post-video-container{
   width: 100%;
-  height: 550px;
-  margin: 0 0 55px 0;
+  /* height: 350px; */
+  padding-bottom: 56.25%;
+  margin: 0 0 30px 0;
   overflow: hidden;
   position: relative;
   background-color: black;
@@ -538,44 +566,85 @@ section#post-content .post-image:hover{
   transform: translate(-50%, -50%);
   transition-duration: 0.125s;
 }
-/* #post-content .post-image:hover .play-button:before{
-  font-size: 6em;
-  transition-duration: 0.125s;
-  color: #e9ac37;
-} */
 section#post-content iframe#post-video{
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
+/* Post Content - Sidebar */
+#post-sidebar.col-4 .col{
+  padding: 0 0 0 1.5%;
+}
+/* Post Author */
+.post-author{
+  margin-bottom: 18px;
+}
+.post-author-img{
+  background-image: url('../images/gia-solo.jpg');
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  border-radius: 1000px;
 
-
-
-/* Post Content - ALL tags */
-section#post-content{
-  margin-top: 35px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
 }
-section#post-content .post-content-container *{
-  margin: 0 0 15px 0;
+.post-author-title{
+  display: inline-block;
+  vertical-align: middle;
 }
-/* Post Content - Paragraphs */
-section#post-content .post-content-container p{
-  font-size:1.1em;
-  margin: 0 0 25px 0;
+.post-author-title span{
+  opacity: .2;
+  line-height: 100%;
+  display: block;
 }
-/* Post Content - Lists */
-section#post-content .post-content-container ul,
-section#post-content .post-content-container ol{
-  margin: 0 0 30px 0;
-  list-style-position: inside;
-}
-section#post-content .post-content-container li{
-  margin-bottom: 6px;
+.post-author-desc{
+  margin:12px 0;
+  font-size: .85em;
 }
 
-/* Post Content - Tables */
-section#post-content .post-content-container table{
-  margin-bottom: 25px;
+/* Post Options */
+.post-options-item{
+  padding: 10px 0;
+  box-sizing: border-box;
+  border-bottom:1px solid #F2F2F2;
+}
+.post-options-item img{
+  width: 18px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.post-options-item a{
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0 8px;
+}
+.post-options-item.share-post a{
+  color: #11171A;
+}
+.post-options .sfsi_plus_widget{
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0!important;
+}
+.post-options #sfsi_holder{
+  height: 0!important;
+}
+.post-options .sfsiplus_norm_row{
+  width: auto!important;
+  position: relative!important;
+}
+
+.post-options .bookmark-instruction{
+  font-size: .85em;
+  display: none;
+  opacity: .35;
 }
 
 /* Related Posts */
@@ -618,9 +687,11 @@ textarea#comment,
   box-shadow: inset 0px 0px 0px 2.5px #C9E0E6;
   margin:0 0 2.5% 0;
   transition-duration: 0.15s;
-  font-size: 1.2em;
+  font-size: 1em;
 
   resize: none;
+
+  background-color: #F3FAFC;
 }
 textarea#comment:focus,
 .guest-user-form input:focus{
@@ -726,9 +797,10 @@ body.logged-in .comment-list{
   box-sizing: border-box;
 
   position: relative;
+  border-bottom: 1px solid #F2F2F2;
 }
 .comment.depth-1.thread-even{
-  background-color: #F3FAFC;
+  /* background-color: #F3FAFC; */
 }
 .comment.depth-2{
   margin-bottom: 15px;
@@ -736,6 +808,7 @@ body.logged-in .comment-list{
   box-sizing: border-box;
   position: relative;
   color: #11171A;
+
 }
 .comment.depth-2:last-child{
   margin-bottom: 0;
@@ -801,6 +874,7 @@ body.logged-in .comment-list{
 .comment.depth-2 p{
   font-size: .85em;
   display: block;
+  clear: both;
 }
 .comment .reply{
   display: inline;
@@ -826,19 +900,17 @@ img.chat-triangle{
   font-family: 'circular-bold';
   margin:5px 0 0 0;
   cursor: pointer;
-  /* color: #e9ac37; */
-  /* text-align: right; */
   font-size: .85em;
 }
 .comment .dropdown-body{
-  margin-top:5px;
+  margin-top:15px;
   padding: 18px;
-  background-color: #fff;
+  background-color: #F3FAFC;
   display: none;
   border-top: 4.5px solid #007791;
 }
 .comment.thread-odd .dropdown-body{
-  background-color: #F3FAFC;
+  /* background-color: #F3FAFC; */
 }
 
 /* Social */
@@ -849,8 +921,14 @@ img.chat-triangle{
   height: 50px!important;
 }
 .sfsi_plus_wicons.shuffeldiv {
+  width: 25px!important;
+  height: 25px!important;
+
   margin-left: 0!important;
-  margin-right: 10px!important;
+  margin-right: 5px!important;
+  margin-bottom: 0!important;
+
+  padding-top: 0!important;
 }
 
 /* User Stories */

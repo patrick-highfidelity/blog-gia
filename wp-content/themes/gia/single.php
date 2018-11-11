@@ -2,15 +2,15 @@
 <div id="single-template">
   <section id="post-header">
     <div class="container">
-      <div class="post-headline">
-        <a class="btn-close" href="<?php echo get_site_url(); ?>"></a>
-        <a class="logo" href="<?php echo get_site_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/_assets/images/logo-black.svg"/></a>
-        <div class="post-meta">
-          <span class="post-date"><?php echo date("M d, Y", strtotime(get_the_date())); ?></span>
-          <span class="post-category"><?php echo the_category();?></span>
+      <div class="post-headline col-8">
+        <div class="col">
+          <a class="btn-close" href="<?php echo get_site_url(); ?>"></a>
+          <div class="post-meta">
+            <span class="post-date"><?php echo date("M d, Y", strtotime(get_the_date())); ?></span>
+            <span class="post-category"><?php echo the_category();?></span>
+          </div>
+          <h1 class="post-title"><?php echo the_title();?></h1>
         </div>
-        <h1 class="post-title"><?php echo the_title();?></h1>
-        <div class="social-share"><?php echo DISPLAY_ULTIMATE_PLUS(); ?></div>
       </div>
     </div>
   </section>
@@ -42,16 +42,53 @@
 
   <section id="post-content">
     <div class="container">
-      <div class="post-video-container">
-        <div class="post-image" style="background-image:url('<?php the_post_thumbnail_url(); ?>');">
-          <div class="play-button"></div>
+      <div class="col-8">
+        <div class="col">
+          <div class="post-video-container">
+            <div class="post-image" style="background-image:url('<?php the_post_thumbnail_url(); ?>');">
+              <div class="play-button"></div>
+            </div>
+            <!-- <iframe id="post-video" src="https://www.youtube.com/embed/<?php the_field('video-url'); ?>"></iframe> -->
+          </div>
+          <div class="post-content-container">
+            <?php echo the_content(); ?>
+          </div>
         </div>
-        <!-- <iframe id="post-video" src="https://www.youtube.com/embed/<?php the_field('video-url'); ?>"></iframe> -->
       </div>
-      <div class="post-content-container">
-        <?php echo the_content(); ?>
+      <div id="post-sidebar" class="col-4">
+        <div class="col">
+          <div class="post-author">
+            <div class="post-author-img"></div>
+            <div class="post-author-title">
+              <span>Author</span>
+              <h3>Gia</h3>
+            </div>
+            <p class="post-author-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            <a href="#" class="btn small">ABOUT ME</a>
+          </div>
+
+          <div class="post-options">
+            <div class="post-options-item share-post">
+              <img src="<?php bloginfo('template_url'); ?>/_assets/images/icon-social-sharing.svg"/>
+              <a href="#">Share this Post</a>
+              <?php echo DISPLAY_ULTIMATE_PLUS(); ?>
+            </div>
+            <div class="post-options-item bookmark-page">
+              <img src="<?php bloginfo('template_url'); ?>/_assets/images/icon-bookmark.svg"/>
+              <a href="#">Bookmark this Page</a>
+              <div class="bookmark-instruction">Press <span></span></div>
+            </div>
+            <div class="post-options-item post-comment">
+              <img src="<?php bloginfo('template_url'); ?>/_assets/images/icon-comment.svg"/>
+              <a href="#anchor-comments">Post a Comment</a>
+            </div>
+          </div>
+          <div class="post-related">
+
+          </div>
+        </div>
+
       </div>
-      <?php echo DISPLAY_ULTIMATE_PLUS(); ?>
     </div>
   </section>
   <div id="respond-mode"></div>

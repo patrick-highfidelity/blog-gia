@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.446 18.42">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #007791;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="bookmark" transform="translate(1 1)">
+    <path id="Path_333" data-name="Path 333" class="cls-1" d="M4.963,0A1.463,1.463,0,0,0,3.5,1.461V15.517l5.173-3.449,5.173,3.449V1.723c0-.948,1.293-1.75,2.242-1.75Z" transform="translate(-3.5 0.034)"/>
+    <path id="Path_334" data-name="Path 334" class="cls-1" d="M41.069-.031C40.035-.017,38.91.759,38.91,1.7V6.611h4.044V1.477C42.954.667,41.962-.023,41.069-.031Z" transform="translate(-28.508 0.031)"/>
+  </g>
+</svg>
