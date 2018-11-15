@@ -3,6 +3,10 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="<?php single_post_title(); ?>" />
+	<meta property="og:image" content="<?php the_field('fb_thumbnail'); ?>">
+
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
