@@ -64,53 +64,10 @@
               <h3>Gia</h3>
             </div>
             <p class="post-author-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-            <a href="#" class="btn small">ABOUT ME</a>
-          </div>
-
-          <div class="post-options">
-            <div class="post-options-item share-post">
-              <img src="<?php bloginfo('template_url'); ?>/_assets/images/icon-social-sharing.svg"/>
-              <a href="#">Share this Post</a>
-              <?php //echo DISPLAY_ULTIMATE_PLUS(); ?>
-              <!-- Load Facebook SDK for JavaScript -->
-              <div id="fb-root"></div>
-              <script>(function(d, s, id) {
-                  var js, fjs = d.getElementsByTagName(s)[0];
-                  if (d.getElementById(id)) return;
-                  js = d.createElement(s); js.id = id;
-                  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-                  fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));
-              </script>
-
-              <!-- Your share button code -->
-              <div class="fb-share-button"
-                data-href="<?php echo the_permalink(); ?>"
-                data-layout="button_count">
-              </div>
-              <style>
-              #fb-root{
-                display: none;
-              }
-              .fb_iframe_widget{
-                margin-left: 5px;
-              }
-              .fb_iframe_widget span{
-                vertical-align: middle!important;
-              }
-              </style>
+            <a href="#" class="btn small">About Me</a>
+            <div class="post-social">
+              <?php echo do_shortcode('[addthis tool=addthis_horizontal_follow_toolbox]'); ?>
             </div>
-            <div class="post-options-item bookmark-page">
-              <img src="<?php bloginfo('template_url'); ?>/_assets/images/icon-bookmark.svg"/>
-              <a href="#">Bookmark this Page</a>
-              <div class="bookmark-instruction">Press <span></span></div>
-            </div>
-            <div class="post-options-item post-comment">
-              <img src="<?php bloginfo('template_url'); ?>/_assets/images/icon-comment.svg"/>
-              <a href="#anchor-comments">Post a Comment</a>
-            </div>
-          </div>
-          <div class="post-related">
 
           </div>
         </div>

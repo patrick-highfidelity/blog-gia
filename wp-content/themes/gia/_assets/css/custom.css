@@ -59,7 +59,6 @@ header ul.menu li ul li a{
   padding: 7px 14px;
   border-bottom:1px solid #F2F2F2;
   text-align: left;
-  font-family: 'circular-bold';
 }
 header .hamburger-menu{
   width: 30px;
@@ -263,6 +262,7 @@ p.quote-author{
   height:450px;
   padding: 0;
 }
+
 .category-dropdown{
   position:absolute;
   bottom:0;
@@ -277,23 +277,31 @@ p.quote-author{
   color: #fff;
   margin-bottom: 5px;
 }
+img.category-icon{
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  left: -60px;
+  top: 18px;
+}
 .category-selected h1{
   font-size:70px;
   cursor:pointer;
   color:#fff;
   font-weight:800;
   margin-top:-5px;
+  position: relative;
 }
 .category-selected h1:before{
   font-family: FontAwesome;
   font-size: .75em;
   margin-right: 6px;
   vertical-align: top;
-  content: '\f02b';
+  content: '\f004';
 
   color: #e9ac37;
   position: absolute;
-  left: -60px;
+  left: -65px;
 }
 .category-selected h1:after{
   font-family:FontAwesome;
@@ -309,8 +317,8 @@ p.quote-author{
 .category-description p{
   margin:0;
   color:#fff;
-  opacity:.75;
-  font-size:18px;
+  opacity:.62;
+  /* font-size:18px; */
 }
 
 ul.category-listing{
@@ -345,18 +353,21 @@ ul.category-listing li a{
   transition-duration: .2s;
 }
 ul.category-listing li a:hover{
-  background-color: #e9ac37;
+  background-color: #F7F7F7;
   color:#11171A;
   transition-duration: .2s;
 }
 ul.category-listing li:last-child a{
   border-bottom:1px solid rgba(0,0,0,0);
 }
+ul.category-listing li.cat_item.everything a{
+  background-color: #F7F7F7;
+}
 
 
 ul.category-listing .cat_info{
   display: inline-block;
-  width: 83%;
+  width: 87%;
   vertical-align: top;
 }
 ul.category-listing .cat_name{
@@ -365,23 +376,23 @@ ul.category-listing .cat_name{
   font-family: 'circular-bold';
 }
 ul.category-listing .cat_img{
-  /* margin-right:2%; */
-  width: 12%;
+  margin-right:3%;
+  width: 7%;
   display:inline-block;
   vertical-align: top;
   position: relative;
-  top: 5px;
+  top: 7.5px;
 }
 ul.category-listing .cat_img img{
-  width:40px;
-  height:40px;
-  border-radius:300px;
-  vertical-align:middle;
+  width:100%;
+  height: auto;
 }
 ul.category-listing li.cat_item .category-description p{
   font-size: .75em;
   color: #11171A;
+  line-height: 150%;
 }
+
 
 
 section#category-featured{
@@ -683,47 +694,29 @@ a#sfsiplusid_linkedin{
   display: block;
 }
 .post-author-desc{
-  margin:12px 0;
+  margin:16px 0;
   font-size: .85em;
 }
 
-/* Post Options */
-.post-options-item{
-  padding: 10px 0;
-  box-sizing: border-box;
-  border-bottom:1px solid #F2F2F2;
+/* Post Social */
+.post-social{
+  display: block;
+  margin: 20px 0 0 0;
 }
-.post-options-item img{
-  width: 18px;
-  display: inline-block;
-  vertical-align: middle;
-}
-.post-options-item a{
-  vertical-align: middle;
-  display: inline-block;
-  margin: 0 8px;
-}
-.post-options-item.share-post a{
-  color: #11171A;
-}
-.post-options .sfsi_plus_widget{
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0!important;
-}
-.post-options #sfsi_holder{
-  height: 0!important;
-}
-.post-options .sfsiplus_norm_row{
-  width: auto!important;
-  position: relative!important;
-}
-
-.post-options .bookmark-instruction{
-  font-size: .85em;
+/* "Follow" Label */
+#atftbx > p:first-child{
   display: none;
-  opacity: .35;
 }
+/* The icon item */
+.at-follow-tbx-element .at300b,
+.at-follow-tbx-element .at300m{
+  margin:0 8px 0 0!important;
+}
+/* The icon item - circle shape */
+.post-social .at-icon-wrapper{
+  padding: 5px;
+}
+
 
 /* Related Posts */
 section#related-posts{
@@ -864,7 +857,7 @@ body.reply-to .respondee{
   min-height: 50px;
 }
 body.logged-in .comment-list{
-  max-height: 550px;
+  max-height: 450px;
 }
 /* Comment Items */
 .comment.depth-1{

@@ -100,7 +100,7 @@ jQuery( document ).ready(function() {
 
     // Push everything (underneath the Header) down by the header's height
     jQuery('#header-height').height(jQuery('header').height()-3);
-    jQuery('header ul.menu li ul').css('top',jQuery('header').height()-1);
+    jQuery('header ul.menu li ul').css('top',jQuery('header').height()-2);
 
     // Append Home Icon
     jQuery('header ul.menu > li:first-child a').html('');
@@ -139,41 +139,6 @@ jQuery( document ).ready(function() {
 
   }
 
-    /**
-   *
-   * Add to bookmark
-   * Several tests are necessary in order for this "simple" action to work in most of the browsers
-   *
-   */
-  // First, we define the element where the "Add to bookmark" action will trigger
-  var triggerBookmark = $(".post-options-item.bookmark-page a"); // It must be an `a` tag
-
-  triggerBookmark.click(function() {
-
-  	if (window.sidebar && window.sidebar.addPanel) { // Firefox <23
-  		window.sidebar.addPanel(document.title,window.location.href,'');
-  	} else if(window.external && ('AddFavorite' in window.external)) { // Internet Explorer
-  		window.external.AddFavorite(location.href,document.title);
-  	} else if(window.opera && window.print || window.sidebar && ! (window.sidebar instanceof Node)) { // Opera <15 and Firefox >23
-  		/**
-  		 * For Firefox <23 and Opera <15, no need for JS to add to bookmarks
-  		 * The only thing needed is a `title` and a `rel="sidebar"`
-  		 */
-  		triggerBookmark.attr('rel', 'sidebar').attr('title', document.title);
-  		return true;
-  	} else { // For the other browsers (mainly WebKit) we use a simple alert to inform users that they can add to bookmarks with ctrl+D/cmd+D
-      $('.bookmark-instruction span').html((navigator.userAgent.toLowerCase().indexOf('mac') != - 1 ? 'Cmd+' : 'CTRL+') + "D");
-      if($('.bookmark-instruction').css('display') == 'none'){
-        $('.bookmark-instruction').css('display','inline-block');
-      }else{
-        $('.bookmark-instruction').css('display','none');
-      }
-
-  		// alert('You can add this page to your bookmarks by pressing ' + (navigator.userAgent.toLowerCase().indexOf('mac') != - 1 ? 'Command/Cmd' : 'CTRL') + ' + D on your keyboard.');
-  	}
-  	// If you have something in the `href` of your trigger
-  	return false;
-  });
 
   // Highlight Respondee Comment
   var user_comment_id = window.location.search.split("replytocom=")[1];
@@ -212,5 +177,5 @@ jQuery( window ).resize(function() {
 
   // Push everything (underneath the Header) down by the header's height
   jQuery('#header-height').height(jQuery('header').height()-3);
-  jQuery('header ul.menu li ul').css('top',jQuery('header').height()-1);
+  jQuery('header ul.menu li ul').css('top',jQuery('header').height()-2);
 });

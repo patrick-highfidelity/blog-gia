@@ -77,7 +77,7 @@
 						</div>
 					</div>
 			<?php } wp_reset_postdata(); } else { }?>
-			<a href="#" class="btn secondary">View More</a>
+			<a href="<?php echo get_site_url(); ?>/everything" class="btn secondary">View More</a>
 		</div>
 
 	</div>

@@ -209,7 +209,7 @@
     line-height: 105%;
   }
   .category-description p{
-    margin: 7px 0 0 0;
+    /* margin: 7px 0 0 0; */
     font-size: 16px;
     line-height: 130%;
   }
@@ -219,6 +219,9 @@
   }
   ul.category-listing li{
     width: 100%;
+  }
+  img.category-icon{
+    display: none;
   }
 
   /* Sinlge Post Page */

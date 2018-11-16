@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>
+		<?php
+		if(is_front_page()){
+			bloginfo( 'name' );
+		} else{
+			wp_title(''); echo ' | ';  bloginfo( 'name' );
+		} ?>
+	</title>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="<?php single_post_title(); ?>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="<?php single_post_title(); ?>" />
 	<meta property="og:image" content="<?php the_field('fb_thumbnail'); ?>">
 
 	<link rel="profile" href="http://gmpg.org/xfn/11">

@@ -1,19 +1,27 @@
 <?php get_header(); ?>
-
 <?php $cat_id = get_query_var('cat'); ?>
   <div id="category-banner" style="background-image:url('<?php echo do_shortcode('[wp_custom_image_category onlysrc="false" size="full" term_id="'.$cat_id.'"]'); ?>');">
 		<div class="container">
 	    <div class="category-dropdown">
 		    <span class="choose-category-label">Choose a Category:</span>
 		    <div class="category-selected">
-          <h1><?php single_cat_title(); ?></h1>
+          <?php
+              $term = get_queried_object();
+              $category_icon = get_field('category_icon', $term);
+           ?>
+           <style>
+             .category-selected h1:before{
+               content: " ";
+             }
+           </style>
+          <h1><img class="category-icon" src="<?php echo $category_icon; ?>"/><?php single_cat_title(); ?></h1>
           <?php the_archive_description( '<div class="category-description">', '</div>' ); ?>
+
 		    </div>
 		    <ul class="category-listing">
-          <li class="cat_item">
+          <li class="cat_item everything">
             <a href="<?php echo get_site_url(); ?>/everything">
-              <?php $url = wp_get_attachment_url( get_post_thumbnail_id('105') ); ?>
-              <div class="cat_img"><img src="<?php echo $url; ?>"/></div>
+              <div class="cat_img"><img src="<?php bloginfo('template_url'); ?>/_assets/images/icon-heart.png"/></div>
               <div class="cat_info">
                 <div class="cat_name">Everything</div>
                 <div class="category-description"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p></div>
@@ -27,10 +35,13 @@
             'exclude' => array($cat_id,1),
             'hide_empty' => false
           ));
-          foreach($categories as $category) { ?>
+          foreach($categories as $category) {
+            // Get category icon (ACF)
+            $category_icon = get_field('category_icon', $category);
+          ?>
             <li class="cat_item">
   						<a href="<?php echo get_category_link($category->term_id); ?>">
-  							<div class="cat_img"><?php echo do_shortcode(sprintf('[wp_custom_image_category term_id="%s"]',$category->term_id)); ?></div>
+  							<div class="cat_img"><img src="<?php echo $category_icon; ?>"/></div>
   							<div class="cat_info">
                   <div class="cat_name"><?php echo $category->name; ?></div>
                   <?php the_archive_description( '<div class="category-description">', '</div>' ); ?>

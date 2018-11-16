@@ -21,10 +21,13 @@ get_header(); ?>
             'exclude' => array(1,1)
           ));
 
-          foreach($categories as $category) { ?>
+          foreach($categories as $category) {
+            // Get category icon (ACF)
+            $category_icon = get_field('category_icon', $category);
+          ?>
             <li class="cat_item">
   						<a href="<?php echo get_category_link($category->term_id); ?>">
-  							<div class="cat_img"><?php echo do_shortcode(sprintf('[wp_custom_image_category term_id="%s"]',$category->term_id)); ?></div>
+  							<div class="cat_img"><img src="<?php echo $category_icon; ?>"/></div>
   							<div class="cat_info">
                   <div class="cat_name"><?php echo $category->name; ?></div>
                   <div class="category-description"><p><?php echo $category->description; ?></p></div>
