@@ -95,7 +95,7 @@ section#homepage-banner{
 section#homepage-banner,
 #category-banner{
   width:100%;
-  padding: 190px 0;
+  padding: 165px 0;
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
@@ -115,18 +115,18 @@ section#homepage-banner .banner-content{
   z-index: 2;
 }
 section#homepage-banner img.site-logo{
-  width:220px;
+  width:170px;
   margin-bottom: 10px;
 }
 section#homepage-banner h1.site-title{
-  font-size: 55px;
+  font-size: 80px;
   margin:0;
   color: #fff;
 }
 section#homepage-banner h3.site-subtitle{
   margin:0;
   color: #E9AC37;
-  font-size: 1.75em;
+  font-size: 1.55em;
   font-family: 'circular-bold';
 }
 .bg-overlay{
@@ -144,6 +144,7 @@ h2.homepage-section-title{
 /* All Posts - Homepage */
 section#homepage-all-posts{
   display: block;
+  margin-bottom: 45px;
 }
 section#homepage-all-posts .col{
   padding-bottom: 0!important;
@@ -268,11 +269,13 @@ p.quote-author{
   margin:70px 0;
   z-index:2;
 }
-.back-link{
-  font-size: 16px;
+.choose-category-label{
+  font-size: 1.25em;;
   font-family: 'circular-black';
   letter-spacing:0;
-  text-transform: uppercase;
+  display: block;
+  color: #fff;
+  margin-bottom: 5px;
 }
 .category-selected h1{
   font-size:70px;
@@ -281,12 +284,24 @@ p.quote-author{
   font-weight:800;
   margin-top:-5px;
 }
+.category-selected h1:before{
+  font-family: FontAwesome;
+  font-size: .75em;
+  margin-right: 6px;
+  vertical-align: top;
+  content: '\f02b';
+
+  color: #e9ac37;
+  position: absolute;
+  left: -60px;
+}
 .category-selected h1:after{
   font-family:FontAwesome;
   content:"\f107";
-  margin-left:9px;
-  font-size:.9em;
-  font-weight:400;
+  margin-left: 15px;
+  font-size: .7em;
+  font-weight: 400;
+  vertical-align: middle;
 }
 .category-selected h1.open:after{
   content:"\f106";
@@ -305,7 +320,7 @@ ul.category-listing{
   padding-inline-start: 0;
   /* max-width:90%; */
   box-shadow: 1px 1px 30px rgba(0,0,0,0.5);
-  border-radius: 5px;
+  border-radius: 3px;
   overflow: hidden;
 }
 ul.category-listing li{
@@ -350,7 +365,7 @@ ul.category-listing .cat_name{
   font-family: 'circular-bold';
 }
 ul.category-listing .cat_img{
-  margin-right:2%;
+  /* margin-right:2%; */
   width: 12%;
   display:inline-block;
   vertical-align: top;
@@ -397,12 +412,15 @@ section#category-archive{
   margin-top: 0;
 }
 .featured-post .post-excerpt{
-  margin: 23px 0;
+  margin: 16px 0;
 }
 
 /* Column Posts */
 .column-posts{
-  margin-bottom: 55px;
+  /* margin-bottom: 55px; */
+}
+.column-posts a.btn{
+  margin: 35px auto 0 auto;
 }
 .post-item{
   /* text-align:center; */
@@ -432,19 +450,35 @@ section#category-archive{
   transition-duration: .25s;
 }
 .post-meta{
-  margin:20px 0 0 0;
+  margin:15px 0 7px 0;
 }
 .post-meta .post-date,
 .post-meta .post-category{
   display:inline-block;
   /* text-transform: uppercase; */
   font-family: 'circular-black';
+  font-size: .9em;
 }
+.post-meta .post-date:before,
+.post-meta .post-category a:before{
+  font-family: FontAwesome;
+  font-size: .85em;
+  margin-right: 6px;
+  vertical-align: top;
+}
+.post-meta .post-date:before{
+  content: '\f073';
+}
+.post-meta .post-category a:before{
+  content: '\f02b';
+}
+
 .post-meta .post-date{
-  opacity: .25;
+  /* opacity: .25; */
 }
 .post-meta .post-category{
   margin-left:7px;
+  font-size: initial;
 }
 .post-meta .post-category a{
   color: #e9ac37;

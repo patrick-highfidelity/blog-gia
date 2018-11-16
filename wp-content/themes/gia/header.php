@@ -35,7 +35,7 @@
 		<div class="container">
 			<a href="<?php echo get_site_url(); ?>" class="title">
 				<img class="logo" src="<?php bloginfo('template_url'); ?>/_assets/images/logo-black.svg"/>
-				<h3 class="title">Gia does what she loves</h3>
+				<h3 class="title">Try Everything</h3>
 			</a>
 			<div class="hamburger-menu">
 			</div>

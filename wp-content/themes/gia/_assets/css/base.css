@@ -321,29 +321,17 @@ input[type="submit"]:hover{
   background-color: #007791;
 }
 .btn.secondary{
+  background-color: #F0AB27;
+  color: #fff;
+  box-shadow: inset 0px 0px 0px 2.5px #F0AB27;
+}
+.btn.secondary:hover{
   background-color: #fff;
-  color: #007791;
-  /* box-shadow: inset 0px 0px 0px 2.5px rgba(213,232,236,.5); */
-  box-shadow: none;
-}
-.btn.third{
-  background-color: rgba(213,232,236,.5);
-  color: #007791;
-  box-shadow: inset 0px 0px 0px 1px rgba(213,232,236,.5);
-}
-.btn.secondary:hover,
-.btn.third:hover{
-  /* background-color: rgba(0,119,145,0.05); */
-  background-color: rgba(255,255,255,.5);
-
-  /* box-shadow: 2px 2px 35px rgba(213,232,236,1); */
+  transition-duration: 0.2s;
+  color:#F0AB27;
 }
 select:hover{
   background-color: rgba(0,119,145,0.05)!important;
-}
-.btn.third.cancel:hover{
-  /* box-shadow: inset 0px 0px 0px 1px rgba(213,232,236,1); */
-  background-color: rgba(0,119,145,0.05);
 }
 
 a.btn.hover-blue:hover{

@@ -3,8 +3,8 @@
 <section id="homepage-banner">
 	<div class="banner-content">
 		<img class="site-logo" src="<?php bloginfo('template_url'); ?>/_assets/images/logo-white.svg"/>
-		<h1 class="site-title">Gia does what she loves</h1>
-		<h3 class="site-subtitle">Living life with an open heart.</h3>
+		<h1 class="site-title">Try Everything</h1>
+		<h3 class="site-subtitle">You never know what lies beyond your uncertainty.</h3>
 	</div>
 	<div class="bg-overlay"></div>
 </section>
@@ -77,7 +77,9 @@
 						</div>
 					</div>
 			<?php } wp_reset_postdata(); } else { }?>
+			<a href="#" class="btn secondary">View More</a>
 		</div>
+
 	</div>
 </section>
 

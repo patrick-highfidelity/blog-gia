@@ -1,39 +1,33 @@
-<?php get_header(); ?>
+<?php
+/*
+Template Name: All Posts
+*/
+get_header(); ?>
 
-<?php $cat_id = get_query_var('cat'); ?>
-  <div id="category-banner" style="background-image:url('<?php echo do_shortcode('[wp_custom_image_category onlysrc="false" size="full" term_id="'.$cat_id.'"]'); ?>');">
+  <div id="category-banner" style="background-image:url('<?php the_post_thumbnail_url(); ?>');">
 		<div class="container">
 	    <div class="category-dropdown">
 		    <span class="choose-category-label">Choose a Category:</span>
 		    <div class="category-selected">
-          <h1><?php single_cat_title(); ?></h1>
-          <?php the_archive_description( '<div class="category-description">', '</div>' ); ?>
+          <h1><?php single_post_title(); ?></h1>
+          <div class="category-description"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p></div>
 		    </div>
 		    <ul class="category-listing">
-          <li class="cat_item">
-            <a href="<?php echo get_site_url(); ?>/everything">
-              <?php $url = wp_get_attachment_url( get_post_thumbnail_id('105') ); ?>
-              <div class="cat_img"><img src="<?php echo $url; ?>"/></div>
-              <div class="cat_info">
-                <div class="cat_name">Everything</div>
-                <div class="category-description"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p></div>
-              </div>
-            </a>
-          </li>
           <?php
           $categories = get_categories( array(
             'orderby' => 'name',
             'order'   => 'ASC',
-            'exclude' => array($cat_id,1),
-            'hide_empty' => false
+            'hide_empty' => false,
+            'exclude' => array(1,1)
           ));
+
           foreach($categories as $category) { ?>
             <li class="cat_item">
   						<a href="<?php echo get_category_link($category->term_id); ?>">
   							<div class="cat_img"><?php echo do_shortcode(sprintf('[wp_custom_image_category term_id="%s"]',$category->term_id)); ?></div>
   							<div class="cat_info">
                   <div class="cat_name"><?php echo $category->name; ?></div>
-                  <?php the_archive_description( '<div class="category-description">', '</div>' ); ?>
+                  <div class="category-description"><p><?php echo $category->description; ?></p></div>
                 </div>
   						</a>
   		      </li>
@@ -46,12 +40,11 @@
 	<section id="category-featured">
 		<div class="container">
 			<div class="featured-post">
-        <?php $cat_id = get_query_var('cat'); global $post; ?>
         <?php
         $args = array(
         'post_type' => 'post',
         'posts_per_page' => 1,
-        'cat' => $cat_id
+        'category__not_in' => array( 1 )
         );
         $the_query = new WP_Query( $args );
         if ( $the_query->have_posts() ) {
@@ -86,7 +79,7 @@
         $args = array(
         'post_type' => 'post',
         'posts_per_page' => 9,
-        'cat' => $cat_id,
+        'category__not_in' => array( 1 ),
         'offset' => 1
         );
         $the_query = new WP_Query( $args );
