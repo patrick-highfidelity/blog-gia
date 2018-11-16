@@ -48,7 +48,7 @@ header ul.menu li a{
   color: #11171A;
 }
 header ul.menu li ul{
-  border-top: 4.5px solid #E9AC37;
+  /* border-top: 4.5px solid #E9AC37; */
   left: 0;
   top: 30px;
 }
@@ -82,6 +82,10 @@ header ul li.menu-item-home a:after{
   font-size: 1.75em;
   vertical-align: middle;
   display: block;
+}
+
+header ul.sub-menu li.current-menu-item{
+  background-color: #e9ac37;
 }
 
 section#homepage-banner{
@@ -483,7 +487,7 @@ section#post-header .logo{
 }
 section#post-header .post-meta{
   margin: 0;
-  font-size: 1.15em;
+  /* font-size: 1.15em; */
 }
 section#post-header h1.post-title{
 }
@@ -491,7 +495,7 @@ section#post-header h1.post-title{
 section#post-header a.btn-close:before{
   font-family:FontAwesome;
   content:"\f00d";
-  font-size:2.15em;
+  font-size:1.95em;
   position: absolute;
   top: 0;
   right: 4.2%;
@@ -615,6 +619,9 @@ a#sfsiplusid_linkedin{
 .sfsi_plus_tool_tip_2 .bot_arow{
     display: none;
 }
+
+
+
 /* Post Author */
 .post-author{
   margin-bottom: 18px;
@@ -721,14 +728,12 @@ textarea#comment,
 .guest-user-form input{
   padding: 12px 15px;
   box-sizing: border-box;
-  box-shadow: inset 0px 0px 0px 2.5px #C9E0E6;
+  box-shadow: inset 0px 0px 0px 2.5px #007791;
   margin:0 0 2.5% 0;
   transition-duration: 0.15s;
   font-size: 1em;
-
   resize: none;
-
-  background-color: #F3FAFC;
+  /* background-color: #F3FAFC; */
 }
 textarea#comment:focus,
 .guest-user-form input:focus{
@@ -753,7 +758,7 @@ body.reply-to textarea#comment.filled{
 .guest-user-form label,
 label.guest-user-comment{
   font-family: 'circular-bold';
-  font-size: 1.3em;
+  font-size: 1.15em;
   margin-bottom: 5px;
   display: block;
   color: #007791;
@@ -830,7 +835,7 @@ body.logged-in .comment-list{
 /* Comment Items */
 .comment.depth-1{
   /* margin-bottom: 20px; */
-  padding: 20px;
+  padding: 15px 0;
   box-sizing: border-box;
 
   position: relative;
@@ -840,7 +845,7 @@ body.logged-in .comment-list{
   /* background-color: #F3FAFC; */
 }
 .comment.depth-2{
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   /* padding-left: 15px; */
   box-sizing: border-box;
   position: relative;
@@ -903,7 +908,7 @@ body.logged-in .comment-list{
 /* Comment Content */
 .comment-content{
   display: block;
-  margin:7px 0 0 0;
+  /* margin:7px 0 0 0; */
 }
 .comment p{
  display: inline;
@@ -935,16 +940,16 @@ img.chat-triangle{
 }
 .comment .dropdown-btn{
   font-family: 'circular-bold';
-  margin:5px 0 0 0;
+  /* margin:5px 0 0 0; */
   cursor: pointer;
   font-size: .85em;
 }
 .comment .dropdown-body{
   margin-top:15px;
-  padding: 18px;
+  padding: 10px 15px;
   background-color: #F3FAFC;
   display: none;
-  border-top: 4.5px solid #007791;
+  /* border-top: 4.5px solid #007791; */
 }
 .comment.thread-odd .dropdown-body{
   /* background-color: #F3FAFC; */

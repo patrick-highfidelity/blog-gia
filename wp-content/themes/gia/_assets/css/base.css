@@ -58,8 +58,8 @@ h1,h2,h3,h4{
 h1:first-child,h2:first-child,h3:first-child,h4:first-child{
   margin-top: 0;
 }
-h1{font-size: 2.5em;}
-h2{font-size: 2em; margin: 2.5% 0 0.5% 0;}
+h1{font-size: 2.25em;}
+h2{font-size: 1.75em; margin: 2.5% 0 0.5% 0;}
 h3{font-size: 1.5em; margin: 2.5% 0 0.5% 0;}
 h4{font-size: 1.45em;}
 h5{font-size: 1em;}
@@ -100,7 +100,7 @@ img{
 
 section{
   width: 100%;
-  margin:55px auto auto auto;
+  margin:45px auto auto auto;
   display: block;
   clear: both;
 }
