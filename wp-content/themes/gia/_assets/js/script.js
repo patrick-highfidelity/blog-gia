@@ -139,6 +139,14 @@ jQuery( document ).ready(function() {
 
   }
 
+  jQuery('.user-stories-intro button').click(function(){
+    jQuery('#user-stories-modal-container').fadeToggle();
+    jQuery('#user-stories-modal-container textarea').focus();
+  });
+
+  jQuery('#user-stories-modal-container .btn-close').click(function(){
+    jQuery('#user-stories-modal-container').fadeToggle();
+  });
 
   // Highlight Respondee Comment
   var user_comment_id = window.location.search.split("replytocom=")[1];

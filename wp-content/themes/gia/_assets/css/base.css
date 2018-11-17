@@ -59,7 +59,7 @@ h1:first-child,h2:first-child,h3:first-child,h4:first-child{
   margin-top: 0;
 }
 h1{font-size: 2.25em;}
-h2{font-size: 1.75em; margin: 2.5% 0 0.5% 0;}
+h2{font-size: 1.85em; margin: 2.5% 0 0.5% 0;}
 h3{font-size: 1.5em; margin: 2.5% 0 0.5% 0;}
 h4{font-size: 1.45em;}
 h5{font-size: 1em;}
@@ -281,7 +281,8 @@ ul.breadcrumbs li:last-child{
 
 /************** BUTTONS **************/
 .btn,input[type="submit"],button{
-    font-family: 'circular', sans-serif;
+  letter-spacing: -.75px;
+    font-family: 'circular-black', sans-serif;
     cursor: pointer;
     width: auto;
     white-space: nowrap;
@@ -326,8 +327,10 @@ input[type="submit"]:hover{
   transition-duration: 0.2s;
   color:#F0AB27;
 }
-select:hover{
-  background-color: rgba(0,119,145,0.05)!important;
+.btn.white{
+  background-color: #fff;
+  color: #F0AB27;
+  box-shadow: none;
 }
 
 a.btn.hover-blue:hover{
@@ -338,7 +341,6 @@ a.btn.hover-white:hover{
   border:1.5px solid #fff;
   color: #fff!important;
 }
-
 a.btn.small,
 input[type="submit"].small,
 button.small{
@@ -346,14 +348,12 @@ button.small{
   padding: 4px 18px;
   font-family: 'circular-black';
 }
-
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
     outline: none;
 }
-
 /************** LISTS **************/
 ul, ol{
   margin: 1.5% 0;
