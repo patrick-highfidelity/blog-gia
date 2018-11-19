@@ -17,14 +17,13 @@
 
 <div id="user-stories-modal-container">
   <div class="user-stories-form">
-    <h2>Be open. Be you.</h2>
-    <p>I would love to hear your story. Share what keeps you up at night and what brings a smile to your face no matter how tough life gets!</p>
+    <h2>I'm listening.</h2>
+    <p>Be open. Be honest. I would love to hear what gets you fired up. I yearn for inspiration too!</p>
     <?php echo do_shortcode('[contact-form-7 id="22" title="User Story Form"]'); ?>
     <a class="btn-close"></a>
   </div>
   <div class="bg-overlay"></div>
 </div>
-
 
 <section id="newsletter" class="bg light-blue">
   <div class="container">

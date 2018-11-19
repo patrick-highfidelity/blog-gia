@@ -258,4 +258,10 @@
     display: none;
   }
 
+  .wpcf7-response-output{
+    left: 1em;
+    max-width: 95%;
+    box-sizing: border-box;
+  }
+
 }

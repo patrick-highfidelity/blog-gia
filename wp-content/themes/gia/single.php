@@ -35,11 +35,8 @@
     if (window.location.href.indexOf("replytocom") != -1 && window.location.href.indexOf("#anchor-comments") != -1){
       window.location.href = '<?php echo $url; ?>#anchor-comments';
     }
-
   });
-
   </script>
-
   <section id="post-content">
     <div class="container">
       <div class="col-8">
@@ -48,7 +45,6 @@
             <div class="post-image" style="background-image:url('<?php the_post_thumbnail_url(); ?>');">
               <div class="play-button"></div>
             </div>
-            <!-- <iframe id="post-video" src="https://www.youtube.com/embed/<?php the_field('video-url'); ?>"></iframe> -->
           </div>
           <div class="post-content-container">
             <?php echo the_content(); ?>
@@ -68,10 +64,8 @@
             <div class="post-social">
               <?php echo do_shortcode('[addthis tool=addthis_horizontal_follow_toolbox]'); ?>
             </div>
-
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -117,7 +111,6 @@
               // The comment Query
               $comments_query = new WP_Comment_Query;
               $comments = $comments_query->query( $args );
-
               // Comment Loop
               if ( $comments ) {
                 wp_list_comments( $args, $comments );
@@ -144,11 +137,10 @@
   $the_query = new WP_Query( $args );
 
   if ( $the_query->have_posts() ) { ?>
-  <section class="bg light-grey" id="related-posts">
+  <section class="" id="related-posts">
     <div class="container">
       <h2 class="section-title">Related Posts</h2>
       <div>
-
           <?php while ( $the_query->have_posts() ) {
           $the_query->the_post(); ?>
           <div class="col-4 post-item">

@@ -139,14 +139,26 @@ jQuery( document ).ready(function() {
 
   }
 
+  // Display User Story MODAL
   jQuery('.user-stories-intro button').click(function(){
     jQuery('#user-stories-modal-container').fadeToggle();
     jQuery('#user-stories-modal-container textarea').focus();
   });
-
+  // Hide User Story MODAL
   jQuery('#user-stories-modal-container .btn-close').click(function(){
     jQuery('#user-stories-modal-container').fadeToggle();
   });
+
+  // Add "required" attribute to Contact Form 7 forms
+  jQuery(".wpcf7-form-control").prop('required',true);
+  jQuery(".wpcf7-form").removeAttr('novalidate');
+
+
+  // Hide contact form alert sign
+  jQuery('body').click(function(){
+    jQuery('.wpcf7-response-output').fadeOut();
+  });
+
 
   // Highlight Respondee Comment
   var user_comment_id = window.location.search.split("replytocom=")[1];

@@ -20,10 +20,11 @@ header img.logo{
 header h3.title{
   font-family: 'circular-black';
   display: inline-block;
-  margin:0;
+  margin:0 0 0 5px;
   transition-duration: 0.12s;
   color: #11171A;
   vertical-align: middle;
+  font-size: 1.85em;
 }
 header .menu-main-menu-container{
   display: inline-block;
@@ -41,8 +42,8 @@ header ul.menu > li > a{
   display: inline-block;
   transition-duration: .2s;
 }header ul.menu > li > a:hover{
-  color: #E9AC37;
-  transition-duration: .2s;
+  /* color: #E9AC37; */
+  /* transition-duration: .2s; */
 }
 header ul.menu li a{
   color: #11171A;
@@ -577,7 +578,7 @@ section#post-content .post-content-container *{
 section#post-content .post-content-container p{
   margin: 0 0 25px 0;
 }
-section#post-content .post-content-container p:last-child{
+section#post-content .post-content-container p:last-of-type{
   margin: 0;
 }
 /* Post Content - Lists */
@@ -757,24 +758,24 @@ textarea#comment,
 .guest-user-form input{
   padding: 12px 15px;
   box-sizing: border-box;
-  box-shadow: inset 0px 0px 0px 2.5px #007791;
+  box-shadow: inset 0px 0px 0px 2px #EAFAFF;
   margin:0 0 2.5% 0;
   transition-duration: 0.15s;
   font-size: 1em;
   resize: none;
-  /* background-color: #F3FAFC; */
+  background-color: #EAFAFF;
 }
 textarea#comment:focus,
 .guest-user-form input:focus{
-  box-shadow: inset 0px 0px 0px 3.5px #007791;
+  box-shadow: inset 0px 0px 0px 2px #007791;
   transition-duration: 0.15s;
 }
 textarea#comment.filled,
 .guest-user-form input.filled{
-  background-color: #F3FAFC;
+  background-color: #EAFAFF;
   /* box-shadow: inset 0px 0px 0px 2.5px #C9E0E6; */
 }
-body.reply-to textarea#comment.filled{
+body.reply-to textarea#comment{
   background-color: #FBF2E2;
 }
 
@@ -822,7 +823,7 @@ label.guest-user-comment{
   color: #e9ac37;
 }
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px #F3FAFC inset !important;
+  -webkit-box-shadow: 0 0 0 1000px #EAFAFF inset !important;
 }
 
 /* Reply to MODE */
@@ -850,6 +851,7 @@ body.reply-to textarea#comment::-ms-input-placeholder { /* Microsoft Edge */
 }
 body.reply-to .respondee{
   background-color: #FBF2E2!important;
+  padding: 15px 17px;
   /* box-shadow:inset 0px 0px 0px 3.5px #e9ac37; */
   /* box-shadow: inset 10px 0px 0px -5px #e9ac37; */
 }
@@ -871,7 +873,7 @@ body.logged-in .comment-list{
   border-bottom: 1px solid #F2F2F2;
 }
 .comment.depth-1.thread-even{
-  /* background-color: #F3FAFC; */
+  /* background-color: #EAFAFF; */
 }
 .comment.depth-2{
   margin-bottom: 8px;
@@ -916,8 +918,8 @@ body.logged-in .comment-list{
 .comment-meta{
   font-size: .85em;
   opacity: .2;
-  font-family: 'circular-black';
-  text-transform: uppercase;
+  font-family: 'circular-bold';
+  /* text-transform: uppercase; */
 
   display: inline-block;
   float: right;
@@ -949,7 +951,7 @@ body.logged-in .comment-list{
 }
 .comment .reply{
   display: inline;
-  margin: 0 0 0 5px;
+  margin: 0 0 0 7.5px;
   font-size: .85em;
   font-family: 'circular-bold';
 }
@@ -974,14 +976,14 @@ img.chat-triangle{
   font-size: .85em;
 }
 .comment .dropdown-body{
-  margin-top:15px;
+  margin-top:10px;
   padding: 10px 15px;
-  background-color: #F3FAFC;
+  background-color: #f7f7f7;
   display: none;
   /* border-top: 4.5px solid #007791; */
 }
 .comment.thread-odd .dropdown-body{
-  /* background-color: #F3FAFC; */
+  /* background-color: #EAFAFF; */
 }
 
 /* Social */
@@ -1008,7 +1010,7 @@ section#user-stories{
   background-position: 100% 0;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 0 0 0 0;
+  /* margin: 0 0 0 0; */
   overflow: hidden;
 }
 section#user-stories .col-4{
@@ -1041,10 +1043,10 @@ section#user-stories img{
 #user-stories-modal-container a.btn-close:before{
   font-family: FontAwesome;
   content: "\f00d";
-  font-size: 1.35em;
+  font-size: 2em;
   position: absolute;
-  top: 15px;
-  right: 20px;
+  top: 20px;
+  right: 25px;
   color: #F0AB27;
 }
 .user-stories-form{
@@ -1059,7 +1061,10 @@ section#user-stories img{
   box-sizing: border-box;
   border-radius: 5px;
   box-shadow: 1px 1px 40px rgba(0,0,0,0.5);
-  border-top: 7px solid #F0AB27;
+  border-top: 12px solid #F0AB27;
+}
+.user-stories-form h2{
+  font-size: 2.35em;
 }
 .user-stories-form p{
   margin: 15px 0 20px 0;
@@ -1080,9 +1085,16 @@ section#user-stories img{
   margin-top: 15px!important;
   box-shadow: inset 0px 0px 0px 2px #EAFAFF;
   background: #EAFAFF;
+  transition-duration: .2s;
 }
 .user-stories-form form input[type="submit"]{
   margin-top: 15px!important;
+}
+.user-stories-form form input[type="text"]:focus,
+.user-stories-form form input[type="email"]:focus,
+.user-stories-form form textarea:focus{
+  box-shadow: inset 0px 0px 0px 2px #007791;
+  transition-duration: .2s;
 }
 
 /* Newsletter */
@@ -1094,7 +1106,7 @@ section#newsletter{
 section#newsletter h2{
   text-align: center;
   margin-bottom: 15px;
-  color: #007791;
+  color: #004F60;
   font-size: 2.2em;
 }
 section#newsletter br{
@@ -1118,7 +1130,7 @@ section#newsletter input[type="text"],
 section#newsletter input[type="email"],
 section#newsletter textarea{
   /* box-shadow: inset 0px 0px 0px 3px #fff; */
-  box-shadow: 1px 1px 20px rgba(0,0,0,0.35);
+  box-shadow: 1px 1px 20px rgba(0,0,0,0.2);
   box-sizing: border-box;
   font-size: 1.2em;
 
@@ -1130,6 +1142,9 @@ section#newsletter input:focus,
 section#newsletter textarea:focus {
   /* box-shadow: inset 0px 0px 0px 3px #fff; */
   transition-duration: 0.25s;
+}
+section#newsletter input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
 }
 section#newsletter input[type="submit"]{
   margin: 20px auto 0 auto;
@@ -1200,4 +1215,29 @@ section#newsletter ::-ms-input-placeholder { /* Microsoft Edge */
   opacity: .4;
   font-family: 'circular-bold';
   /* color: #333; */
+}
+
+
+/* Contact Form 7 Alert */
+.wpcf7-response-output{
+  position: fixed;
+  z-index: 10!important;
+  right: 1em;
+  display: block;
+  background: white;
+  top: 1em;
+  cursor: pointer;
+  line-height: 145%;
+
+  margin:0!important;
+  padding: 1em 1.5em!important;
+  border-radius: 5px;
+  border: none!important;
+  box-shadow: 1px 1px 40px rgba(0,0,0,0.5);
+
+  /* font-family: 'circular-bold'; */
+}
+div.wpcf7-mail-sent-ok{
+  /* color: #398f14!important; */
+
 }

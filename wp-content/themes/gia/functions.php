@@ -22,7 +22,7 @@ function wpse_comment_date_18350375( $date ) {
   $date = date("M d, Y");
   return $date;
 }
-add_filter( 'get_comment_date', 'wpse_comment_date_18350375' );
+// add_filter( 'get_comment_date', 'wpse_comment_date_18350375' );
 
 function redirect_comments( $location, $commentdata ) {
   if(!isset($commentdata) || empty($commentdata->comment_post_ID) ){

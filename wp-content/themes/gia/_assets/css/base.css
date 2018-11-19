@@ -111,7 +111,7 @@ section.bg.light-blue{
   background-color: #007791;
 }
 section.bg.light-grey{
-  background-color: #F3FAFC;
+  background-color: #EAFAFF;
 }
 .section-title{
   margin: 0 0 30px 0;
@@ -410,6 +410,7 @@ input[type="radio"],input[type="checkbox"]{
 }
 textarea{
   min-height: 150px;
+  resize: none;
 }
 select {
   -webkit-appearance: none;
@@ -506,12 +507,12 @@ th{
 
 thead td,
 thead th{
-  background-color: #F3FAFC;
+  background-color: #EAFAFF;
   /* color: #007791; */
   font-size: 1.2em;
   padding: 12px 15px;
   font-family: 'circular-bold';
 }
 tbody tr:nth-child(even){
-  background-color: #F3FAFC;
+  background-color: #EAFAFF;
 }
