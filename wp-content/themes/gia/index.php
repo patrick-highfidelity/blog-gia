@@ -9,6 +9,17 @@
 	<div class="bg-overlay"></div>
 </section>
 
+<section id="intro">
+	<div class="container">
+		<div class="intro-block">
+			<div class="intro-pic-gia"></div>
+			<h2>This is my attempt to just… try.</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<img src="<?php bloginfo('template_url'); ?>/_assets/images/logo-white.svg"/>
+		</div>
+	</div>
+</section>
+
 <section id="homepage-all-posts">
 	<div class="container">
 		<div class="featured-post">
@@ -178,7 +189,7 @@
 	</div>
 </section>
 
-<section id="intro">
+<section id="introz">
 	<div class="container">
 		<div id="intro-video">
 			<div class="intro-thumbnail">
