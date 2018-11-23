@@ -61,7 +61,7 @@ h1:first-child,h2:first-child,h3:first-child,h4:first-child{
 h1{font-size: 2.25em;}
 h2{font-size: 1.85em; margin: 2.5% 0 0.5% 0;}
 h3{font-size: 1.5em; margin: 2.5% 0 0.5% 0;}
-h4{font-size: 1.45em;}
+h4{font-size: 1.25em;}
 h5{font-size: 1em;}
 p{
   font-size: .92em;
@@ -281,7 +281,7 @@ ul.breadcrumbs li:last-child{
 
 /************** BUTTONS **************/
 .btn,input[type="submit"],button{
-  letter-spacing: -.75px;
+  letter-spacing: -.5px;
     font-family: 'circular-black', sans-serif;
     cursor: pointer;
     width: auto;
@@ -341,13 +341,7 @@ a.btn.hover-white:hover{
   border:1.5px solid #fff;
   color: #fff!important;
 }
-a.btn.small,
-input[type="submit"].small,
-button.small{
-  font-size: .9em;
-  padding: 4px 18px;
-  font-family: 'circular-black';
-}
+
 input:focus,
 select:focus,
 textarea:focus,

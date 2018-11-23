@@ -60,9 +60,35 @@
               <h3>Gia</h3>
             </div>
             <p class="post-author-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-            <a href="#" class="btn small">About Me</a>
+            <div class="side-menu">
+              <a href="#" class="btn">About Me</a>
+              <a href="#" class="btn">Subscribe to my Newsletter</a>
+            </div>
             <div class="post-social">
               <?php echo do_shortcode('[addthis tool=addthis_horizontal_follow_toolbox]'); ?>
+            </div>
+
+            <h4>More Categories</h4>
+            <div class="side-menu">
+              <?php
+                $categories = get_categories( array(
+                  'orderby' => 'name',
+                  'order'   => 'ASC',
+                  'hide_empty' => false,
+                  'exclude' => array(1,1)
+                ));
+
+                foreach($categories as $category) {
+                  // Get category icon (ACF)
+                  $category_icon = get_field('category_icon', $category);
+                ?>
+                <div class="cat_item">
+                  <div class="cat_img"><img src="<?php echo $category_icon; ?>"/></div>
+    							<div class="cat_info">
+                    <a class="btn" href="<?php echo get_category_link($category->term_id); ?>"><div class="cat_name"><?php echo $category->name; ?></div></a>
+                  </div>
+                </div>
+              <?php } ?>
             </div>
           </div>
         </div>
@@ -159,7 +185,7 @@
                 <h3 class="post-title"><?php echo the_title();?></h3>
               </a>
               <p class="post-excerpt"><?php echo strip_tags(get_the_excerpt());?></p>
-              <a class="post-link" href="<?php echo the_permalink(); ?>">Read More</a>
+              <a class="post-link btn" href="<?php echo the_permalink(); ?>">Read More</a>
             </div>
           </div>
           <?php } wp_reset_postdata(); ?>

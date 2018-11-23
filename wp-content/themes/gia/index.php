@@ -15,7 +15,7 @@
 			<div class="intro-pic-gia"></div>
 			<h2>This is my attempt to just… try.</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			<img src="<?php bloginfo('template_url'); ?>/_assets/images/logo-white.svg"/>
+			<img src="<?php bloginfo('template_url'); ?>/_assets/images/logo-black.svg"/>
 		</div>
 	</div>
 </section>
@@ -52,7 +52,7 @@
 						<h2 class="post-title"><?php echo the_title();?></h2>
 					</a>
 					<p class="post-excerpt"><?php echo wp_trim_words( get_the_content(), 30, '...' ); ?></p>
-					<a class="post-link" href="<?php echo the_permalink(); ?>">Read More</a>
+					<a class="post-link btn" href="<?php echo the_permalink(); ?>">Read More</a>
 				</div>
 			</div>
 			<?php } wp_reset_postdata(); } else { }?>
@@ -61,7 +61,7 @@
 			<?php
 			$args = array(
 			'post_type' => 'post',
-			'posts_per_page' => 3,
+			'posts_per_page' => 6,
 			'offset' => 1
 			);
 			$the_query = new WP_Query( $args );
@@ -84,11 +84,11 @@
 								<h3 class="post-title"><?php echo the_title();?></h3>
 							</a>
 							<p class="post-excerpt"><?php echo strip_tags(get_the_excerpt());?></p>
-							<a class="post-link" href="<?php echo the_permalink(); ?>">Read More</a>
+							<a class="post-link btn" href="<?php echo the_permalink(); ?>">Read More</a>
 						</div>
 					</div>
 			<?php } wp_reset_postdata(); } else { }?>
-			<a href="<?php echo get_site_url(); ?>/everything" class="btn secondary">View More</a>
+			<a href="<?php echo get_site_url(); ?>/everything" class="btn secondary view-more">View More</a>
 		</div>
 
 	</div>
@@ -145,7 +145,7 @@
 							  </a>
 		            <p class="post-excerpt"><?php echo wp_trim_words( get_the_content(), 30, '...' ); ?></p>
 
-		            <a class="post-link" href="<?php echo the_permalink(); ?>">Read More</a>
+		            <a class="post-link btn" href="<?php echo the_permalink(); ?>">Read More</a>
 							</div>
 						</div>
 		        <?php } wp_reset_postdata(); } else { }?>
@@ -178,7 +178,7 @@
 			                <h3 class="post-title"><?php echo the_title();?></h3>
 			              </a>
 			              <p class="post-excerpt"><?php echo strip_tags(get_the_excerpt());?></p>
-			              <a class="post-link" href="<?php echo the_permalink(); ?>">Read More</a>
+			              <a class="post-link btn" href="<?php echo the_permalink(); ?>">Read More</a>
 			            </div>
 			          </div>
 			      <?php } wp_reset_postdata(); } else { }?>

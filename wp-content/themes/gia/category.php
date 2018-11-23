@@ -87,7 +87,7 @@
 					    <h2 class="post-title"><?php echo the_title();?></h2>
 					  </a>
             <p class="post-excerpt"><?php echo wp_trim_words( get_the_content(), 30, '...' ); ?></p>
-            <a class="post-link" href="<?php echo the_permalink(); ?>">Read More</a>
+            <a class="post-link btn" href="<?php echo the_permalink(); ?>">Read More</a>
 					</div>
 				</div>
         <?php } wp_reset_postdata(); } else { }?>
@@ -120,7 +120,7 @@
                   <h3 class="post-title"><?php echo the_title();?></h3>
                 </a>
                 <p class="post-excerpt"><?php echo strip_tags(get_the_excerpt());?></p>
-                <a class="post-link" href="<?php echo the_permalink(); ?>">Read More</a>
+                <a class="post-link btn" href="<?php echo the_permalink(); ?>">Read More</a>
               </div>
             </div>
         <?php } wp_reset_postdata(); } else { }?>
